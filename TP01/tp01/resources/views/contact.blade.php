@@ -3,7 +3,7 @@
 @section("titre",'contact')
 
 @section("contenu")
-<h1>Voici la page d'accueil</h1>
+<h1>Formulaire de contact</h1>
 <form action="">
     <label for="mail">Email</label>
     <input type="mail" name="mail" id="">
