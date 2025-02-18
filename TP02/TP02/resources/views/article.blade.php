@@ -4,7 +4,6 @@
     </x-slot:header>
     
     <div class="w-full min-h-screen mx-auto mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 px-4 lg:px-8">
-
         <div class="col-span-full text-center">
             <h1 class="text-3xl font-bold">{{ $vinyle['titre'] }}</h1>
         </div>
@@ -37,7 +36,6 @@
         <div class="col-span-full text-center mt-6">
             <a href="/" class="text-blue-500 hover:underline">Retour à l'Accueil</a>
         </div>
-
     </div>
     
 </x-layout>
