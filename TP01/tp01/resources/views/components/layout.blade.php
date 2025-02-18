@@ -19,6 +19,7 @@
                 <div class="ml-10 flex items-baseline space-x-4">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                     <x-nav-link href=" {{ url('/' )}}"  aria-current="page" :active="request()->is('/')">Accueil</x-nav-link>
+                    <x-nav-link href="{{ url('/jobs' )}}" :active="request()->is('jobs')">jobs</x-nav-link>
                     <x-nav-link href="{{ url('/contact' )}}" :active="request()->is('contact')">Contact</x-nav-link>
                     <x-nav-link href="{{ url('/about' )}}" :active="request()->is('about')">About</x-nav-link>
                 </div>
