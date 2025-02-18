@@ -4,7 +4,6 @@
     <x-slot:header>
         About
     </x-slot:header>
-
     <h1>Voici la page d'information</h1>
     <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
