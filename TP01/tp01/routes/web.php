@@ -4,7 +4,7 @@ use App\Models\Job;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('accueil',['nom'=>"Rayane"]);
+    return view('accueil',['nom'=>'rayane']);
 });
 
 Route::get('/contact', function () {
