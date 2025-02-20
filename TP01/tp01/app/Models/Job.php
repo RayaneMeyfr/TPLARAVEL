@@ -14,7 +14,8 @@ class Job extends Model
 
     protected $fillable = [
         "title",
-        "salary"
+        "salary",
+        "employer_id"
     ];
 
     public function employer(){
