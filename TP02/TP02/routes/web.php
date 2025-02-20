@@ -1,15 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Vinyles;
+use App\Models\Vinyle;
 
 
 Route::get('/', function () {
-    return view('accueil',["vinyles" => Vinyles::all()]);
+    $vinyles = Vinyle::with('artist')->paginate(6);
+    return view('accueil',["vinyles" => $vinyles]);
 });
 
 Route::get('/article/{id}', function ($id) {
-    $vinyle = Vinyles::find($id);
+    $vinyle = Vinyle::find($id);
     return view('article', [ 'vinyle' => $vinyle ] );
 });
 
