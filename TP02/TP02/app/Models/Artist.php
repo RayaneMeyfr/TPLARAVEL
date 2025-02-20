@@ -16,7 +16,7 @@ class Artist extends Model
         'birth_year',
     ];    
 
-    public function vinyle(){
+    public function vinyles(){
         return $this->hasMany(Vinyle::class);
     }
 }

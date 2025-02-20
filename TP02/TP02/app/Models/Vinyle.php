@@ -23,4 +23,7 @@ class Vinyle extends Model
         return $this->belongsTo(Artist::class);
     }
 
+    public function commantaires(){
+        return $this->hasMany(Commantaire::class);
+    }
 }

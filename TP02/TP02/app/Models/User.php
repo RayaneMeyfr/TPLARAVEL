@@ -45,4 +45,8 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function commantaires(){
+        return $this->hasMany(Commantaire::class);
+    }
 }

@@ -21,7 +21,7 @@ class VinyleFactory extends Factory
             'title' => fake()->sentence(3), 
             'release_year' => fake()->year(), 
             'label' => fake()->company(),
-            'artist_id' => Artist::factory()->create()->id, 
+            'artist_id' => Artist::factory(), 
             'description' => implode("\n", fake()->paragraphs(3)), 
             'preview' => fake()->text(100), 
             'date_add' => fake()->date(),

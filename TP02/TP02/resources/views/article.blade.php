@@ -5,7 +5,7 @@
     
     <div class="w-full min-h-screen mx-auto mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 px-4 lg:px-8">
         <div class="col-span-full text-center">
-            <h1 class="text-3xl font-bold">{{ $vinyle['tittle'] }}</h1>
+            <h1 class="text-3xl font-bold">{{ $vinyle['title'] }}</h1>
         </div>
 
         <div class="bg-gray-100 p-6 rounded-lg shadow">
@@ -37,5 +37,22 @@
             <a href="/" class="text-blue-500 hover:underline">Retour à l'Accueil</a>
         </div>
     </div>
+    
+    @foreach ($commantaires as $commantaire)
+
+        @if ($commantaire["vinyle_id"]==$vinyle["id"])
+            <div class="bg-gray-100 p-6 rounded-lg shadow">
+                <p>
+                    Speudo: {{ $commantaire->user["name"] }}<br>
+                    Commantaire: {{ $commantaire['cotent'] }}
+                </p>
+            </div> 
+            <div class="mt-6 flex justify-end">
+                {{ $commantaires->links() }}
+            </div>
+        @endif
+        
+    @endforeach
+    
     
 </x-layout>

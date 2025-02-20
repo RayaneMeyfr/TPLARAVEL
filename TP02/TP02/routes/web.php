@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Vinyle;
+use App\Models\Commantaire;
+
 
 
 Route::get('/', function () {
@@ -10,7 +12,12 @@ Route::get('/', function () {
 });
 
 Route::get('/article/{id}', function ($id) {
-    $vinyle = Vinyle::find($id);
-    return view('article', [ 'vinyle' => $vinyle ] );
+    $vinyle = Vinyle::findOrFail($id);
+    $commentaires = Commantaire::with('user')->where('vinyle_id', $id)->paginate(3);
+
+    return view('article', [
+        'vinyle' => $vinyle,
+        'commantaires' => $commentaires
+    ]);
 });
 
